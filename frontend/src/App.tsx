@@ -1,21 +1,15 @@
 import './App.css'
-import MovieCard from './components/MovieCard'
+import Favorites from './pages/Favorites'
+import Home from './pages/Home'
+import { Routes, Route } from 'react-router-dom'
 function App() {
-
   return (
-    <>
-    <Text display="Hello"/>
-    <Text display="World"/>
-    <MovieCard title="Peter and Pedro" url="" release_date="2024"></MovieCard>
-    </>
-  )
-}
-
-function Text({display}: {display: string}) {
-  return (
-    <div>
-      <p>{display}</p>
-    </div>
+    <main className="main-content">
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/favorites" element={<Favorites/>} />
+      </Routes>
+    </main>
   )
 }
 

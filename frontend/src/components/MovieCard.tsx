@@ -2,8 +2,9 @@ interface Movie {
     title: string,
     url: string,
     release_date: string
+    id: number
 }
-function MovieCard(movie: Movie) {
+function MovieCard({movie}: {movie: Movie}) {
 
     function OnFavoriteClikc() {
         alert("clicked")
