@@ -1,3 +1,4 @@
+import "../css/MovieCard.css"
 interface Movie {
     title: string,
     url: string,
